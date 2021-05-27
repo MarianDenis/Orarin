@@ -21,6 +21,11 @@ public class StudentController {
         return studentService.addStudent(student);
     }
 
+    @GetMapping(value = "/mock")
+    public String getMock() {
+        return "Mock student";
+    }
+
     @GetMapping(value = "/get/{id}")
     public Student getStudentById(@PathVariable Integer id) {
         return studentService.getStudentById(id);
